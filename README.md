@@ -32,6 +32,12 @@ http:
         emptygif:
           paths:
             - /favicon.ico
+          expires: 1h
 ```
 
-`paths` is required and matched exactly against the request path. Other paths go to the router's service (`app` above, defined elsewhere).
+| Option | Default | Description |
+|---|---|---|
+| `paths` | `["/favicon.ico"]` | Request paths answered with the GIF (exact match). |
+| `expires` | `1h` | Go duration (e.g. `30m`) or `off`, like nginx `expires`. Sends `Expires` and `Cache-Control: max-age=<seconds>`. `off` sends neither. |
+
+Other paths go to the router's service (`app` above, defined elsewhere).
