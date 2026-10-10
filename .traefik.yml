@@ -1,0 +1,5 @@
+displayName: Empty GIF
+type: middleware
+import: github.com/suer/traefik-empty-gif-plugin
+summary: Responds with a 1x1 transparent GIF, like nginx empty_gif.
+testData: {}
